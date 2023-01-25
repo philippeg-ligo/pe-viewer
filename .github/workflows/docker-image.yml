@@ -26,7 +26,7 @@ jobs:
              TS=$(date +%s)
              TODAY=$(date +%y%m%d)
              docker build . --file docker/Dockerfile \
-                            --tag ghcr.io/${{ github.actor }}/pe-viewer:${TS} \
-                            --tag ghcr.io/${{ github.actor }}/pe-viewer:${TODAY}
-             docker push ghcr.io/${{ github.actor }}/pe-viewer:${TS}
-             docker push ghcr.io/${{ github.actor }}/pe-viewer:${TODAY}
+                            --tag ghcr.io/${{ github.repository_owner }}/pe-viewer:${TS} \
+                            --tag ghcr.io/${{ github.repository_owner }}/pe-viewer:${TODAY}
+             docker push ghcr.io/${{ github.repository_owner }}/pe-viewer:${TS}
+             docker push ghcr.io/${{ github.repository_owner }}/pe-viewer:${TODAY}
