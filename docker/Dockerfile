@@ -13,8 +13,8 @@ COPY --chown=peviewer *.py README.md /app/
 COPY --chown=peviewer img/* /app/img/
 
 # uncomment these to brand the timestamp of the build in the back-hole-ellipse image
-#COPY docker/brand-image.py /tmp
-#RUN python3 /tmp/brand-image.py
+COPY docker/brand-image.py /tmp
+RUN python3 /tmp/brand-image.py
 RUN printf "\n\nBuild on $(date)\n" >> /app/README.md
 
 EXPOSE 8501
