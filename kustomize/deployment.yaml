@@ -21,7 +21,7 @@ spec:
       containers:
       - name: igwn-peviewer
         image: ghcr.io/philippeg-ligo/pe-viewer:230125
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: streamlit
           containerPort: 8501
