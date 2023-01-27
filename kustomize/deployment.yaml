@@ -20,16 +20,15 @@ spec:
     spec:
       containers:
       - name: igwn-peviewer
-        image: ghcr.io/philippeg-ligo/pe-viewer:230125
-        imagePullPolicy: Always
+        image: ghcr.io/philippeg-ligo/pe-viewer:230126
         ports:
         - name: streamlit
           containerPort: 8501
           protocol: TCP
         resources:
-          limits:
+          limit
             cpu: 2000m
-            memory: 6G
+            memory: 12G
           requests:
             cpu: 100m
-            memory: 1G
+            memory: 4G
