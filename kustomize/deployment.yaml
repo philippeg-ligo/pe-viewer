@@ -26,7 +26,7 @@ spec:
           containerPort: 8501
           protocol: TCP
         resources:
-          limit
+          limit:
             cpu: 2000m
             memory: 12G
           requests:
