@@ -19,19 +19,17 @@ spec:
         app: igwn-peviewer
     spec:
       containers:
-      - name: local-storage name: igwn-peviewer
-        image: ghcr.io/jkanner/pe-viewer:230126
+      - name: igwn-peviewer
+        image: ghcr.io/jkanner/pe-viewer:230206
+        imagePullPolicy: IfNotPresent
         ports:
         - name: streamlit
           containerPort: 8501
           protocol: TCP
-        volumeMounts:
-          - name: streamlit-cache
-            mountPath: /cache
         resources:
           limits:
-            cpu: 4000m
-            memory: 12G
+            cpu: 2000m
+            memory: 6G
           requests:
             cpu: 100m
-            memory: 4
+            memory: 1G
