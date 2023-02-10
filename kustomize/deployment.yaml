@@ -18,10 +18,6 @@ spec:
       labels:
         app: igwn-peviewer
     spec:
-      volumes:
-      - name: streamlit-cache
-        persistentVolumeClaim:
-          claimName: peviewer-pvc
       containers:
       - name: local-storage name: igwn-peviewer
         image: ghcr.io/jkanner/pe-viewer:230126
